@@ -1,0 +1,19 @@
+Timeline for workshop (minutes)
+
+0 - 10: (Jenny) Introduction of workshop and panelists/team 
+
+10 - 40: (Daniel) Overview of concepts of generalizability and transportability 
+
+40 - 50: (Jenny) Clinical overview of the workshop example
+
+50 - 60: (Michael/Alex) Overview of Plot 1 and 2 
+
+60 - 70: (Breakout rooms) Discussion of Plot 1 and Plot 2
+
+70 - 80: (Michael and Alex) Overview of Plot 3 and 4
+
+80 - 90: (Breakout rooms) Discussion of Plot 3 and Plot 4
+
+90 - 105: (Michael) discuss what variables we should include in our sampling model and what target populations are of interest and (2) estimate the treatment effects of interest 
+
+105 - 120: (ALL) wrap up and q&a
