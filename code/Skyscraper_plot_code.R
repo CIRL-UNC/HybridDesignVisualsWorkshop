@@ -58,7 +58,7 @@ if (operating_system == "Darwin" || operating_system == "Linux") {
 # more abstract if you are not used to reading it, so please ask questions if
 # you don't understand something.
 
-# Main plotting function: moperating_systemt of the calculations are done in the helper function .getweights
+# Main plotting function: most of the calculations are done in the helper function .getweights
 skyscraper_plot <- function(trialdata,       # (name) Name of trial / study population file
                             targetdata,      # (name) Name of target population file
                             modelparams = NULL, # (character vector) Set of variables to be plotted in the figure - should be continuous
@@ -67,17 +67,17 @@ skyscraper_plot <- function(trialdata,       # (name) Name of trial / study popu
   withweights <- .getweights(trialset, targset,
                       modelparams = c("age", "female", "colon", "livermets", "wildkras"),
                       weightbyarm = FALSE)
-  if (any(is.na(withweights$sioperating_systemw))) warning("Some weights are missing, plotting function excludes these")
+  if (any(is.na(withweights$siosw))) warning("Some weights are missing, plotting function excludes these")
   withweights$forscramble <- runif(nrow(withweights))
-  plotdata <- data.frame(index = seq_len(nrow(withweights)), sioperating_systemw = withweights$sioperating_systemw[order(withweights$forscramble)]) %>%
-    filter(!is.na(sioperating_systemw) & sioperating_systemw > 0)
-  plotdata$place <- .nomisscumsum(plotdata$sioperating_systemw) # cumulative sum excluding missing values
+  plotdata <- data.frame(index = seq_len(nrow(withweights)), siosw = withweights$siosw[order(withweights$forscramble)]) %>%
+    filter(!is.na(siosw) & siosw > 0)
+  plotdata$place <- .nomisscumsum(plotdata$siosw) # cumulative sum excluding missing values
   p <- ggplot(data = plotdata) + theme_classic() +
     scale_fill_discrete(name = "") +
     scale_x_continuous(name = "Cumulative sum of weights") +
     scale_y_continuous(name = "Stabilized weights")
   p +
-    geom_line(aes(x = place, y = sioperating_systemw), size = .2)
+    geom_line(aes(x = place, y = siosw), size = .2)
 }
 
 
@@ -168,7 +168,7 @@ getweights <- function(trialdata,          # (name) The name of the trial data s
          denomodds = p_den / (1 - p_den),
          numodds = p_num / (1 - p_num),
          ioperating_systemw = intrial * 1 / denomodds,
-         sioperating_systemw = intrial * numodds / denomodds
+         siosw = intrial * numodds / denomodds
   )
 }
 

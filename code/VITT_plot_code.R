@@ -60,7 +60,7 @@ if (operating_system == "Darwin" || operating_system == "Linux") {
 # more abstract if you are not used to reading it, so please ask questions if
 # you don't understand something.
 
-# Main plotting function: moperating_systemt of the calculations are done in the helper function .lnor_vs_lnor_onesample
+# Main plotting function: most of the calculations are done in the helper function .lnor_vs_lnor_onesample
 vitt_plot <- function(trialdata,       # (name) Name of trial / study population file
                       targetdata,      # (name) Name of target population file
                       modelparams = NULL, # (character vector) Set of variables to be plotted in the figure - should be continuous
